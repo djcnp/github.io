@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="og:title" content="日本旅游包车">
+    <meta property="og:description" content="专业包车服务，畅享无忧日本之旅">
+    <meta property="og:image" content="https://picsum.photos/1920/1080">
+    <meta property="og:url" content="your_page_url">
+    <meta property="og:type" content="website">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>日本旅游包车</title>
+    <style>
+        /* 响应式字体 */
+        html {
+            font-size: clamp(14px, 2vw, 16px);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #2563eb;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: block;
+            }
+        }
+
+        /* 避免橡皮筋效果 */
+        html, body {
+            overscroll-behavior-y: contain;
+        }
+
+        /* 去除按钮点击高亮 */
+        a, button {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        /* 表单输入框优化 */
+        input, textarea {
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-blue-600 p-4 relative">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">日本旅游包车</a>
+            <div class="hamburger">
+                <i class="fas fa-bars text-white text-xl"></i>
+            </div>
+            <div class="nav-links space-x-4">
+                <a href="#" class="text-white hover:text-gray-300">首页</a>
+                <a href="#" class="text-white hover:text-gray-300">车型介绍</a>
+                <a href="#" class="text-white hover:text-gray-300">服务项目</a>
+                <a href="#" class="text-white hover:text-gray-300">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="bg-cover bg-center h-screen relative" style="background-image: url('https://picsum.photos/1920/1080');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto h-full flex flex-col justify-center items-center relative z-10">
+            <h1 class="text-5xl text-white font-bold mb-4">开启日本梦幻之旅</h1>
+            <p class="text-xl text-white mb-8">专业包车服务，畅享无忧旅行</p>
+            <a href="#" class="bg-yellow-500 text-white py-3 px-6 rounded-md hover:bg-yellow-600">立即预订</a>
+        </div>
+    </section>
+
+    <!-- 车型介绍 -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">车型介绍</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-md shadow-md p-6">
+                <img srcset="https://picsum.photos/300/200 300w,
+                             https://picsum.photos/600/400 600w"
+                     sizes="(max-width: 768px) 100vw, 300px"
+                     src="https://picsum.photos/300/200" alt="车型1" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">舒适轿车</h3>
+                <p class="text-gray-600">适合小团体出行，舒适便捷，享受私密旅程。</p>
+            </div>
+            <div class="bg-white rounded-md shadow-md p-6">
+                <img srcset="https://picsum.photos/300/201 300w,
+                             https://picsum.photos/600/402 600w"
+                     sizes="(max-width: 768px) 100vw, 300px"
+                     src="https://picsum.photos/300/201" alt="车型2" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">豪华商务车</h3>
+                <p class="text-gray-600">宽敞空间，高端配置，商务出行首选。</p>
+            </div>
+            <div class="bg-white rounded-md shadow-md p-6">
+                <img srcset="https://picsum.photos/300/202 300w,
+                             https://picsum.photos/600/404 600w"
+                     sizes="(max-width: 768px) 100vw, 300px"
+                     src="https://picsum.photos/300/202" alt="车型3" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">大型客车</h3>
+                <p class="text-gray-600">可容纳多人，适合团队旅游，安全可靠。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">服务项目</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-md shadow-md p-6">
+                    <i class="fas fa-map-marker-alt text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">定制行程</h3>
+                    <p class="text-gray-600">根据您的需求，量身定制专属旅游路线。</p>
+                </div>
+                <div class="bg-white rounded-md shadow-md p-6">
+                    <i class="fas fa-clock text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">24小时服务</h3>
+                    <p class="text-gray-600">随时为您提供服务，保障您的出行顺畅。</p>
+                </div>
+                <div class="bg-white rounded-md shadow-md p-6">
+                    <i class="fas fa-user-tie text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">专业司机</h3>
+                    <p class="text-gray-600">经验丰富的司机，熟悉当地路况，为您保驾护航。</p>
+                </div>
+                <div class="bg-white rounded-md shadow-md p-6">
+                    <i class="fas fa-wrench text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">车辆维护</h3>
+                    <p class="text-gray-600">定期保养车辆，确保行车安全。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">联系我们</h2>
+        <div class="flex justify-center">
+            <form class="w-full max-w-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">姓名</label>
+                    <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="请输入您的姓名"><input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="请输入您的姓名">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">邮箱</label>
+                    <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="请输入您的邮箱">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">留言</label>
+                    <textarea id="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="请输入您的留言"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700">提交</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+        <p>&copy; 2025 日本旅游包车 版权所有</p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>    
